@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var lado1=prompt("¿Cuál es el primer lado?");
+        var lado2=prompt("¿Cuál es el segundo lado?");
+        var hipotenusa=Math.sqrt(lado1*lado1+lado2*lado2);
+        $("#solhipotenusa").html(hipotenusa);
+    });
+</script>
+</head>
+<body>
+    <h4>La hipotenusa es:</h4>
+    <p id="solhipotenusa"></p>
+</body>
+</html>
