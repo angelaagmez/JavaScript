@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var p=prompt("Escribe el primer número:");
+        var s=prompt("Escribe el segundo número");
+        
+        $("#message").html("El primer número es: " + p + ". " +
+                           "El segundo número es: " + s)
+        var pMayors;
+        if (p > s){
+            pMayors = true;
+        }
+        else {
+            pMayors = false;
+        }
+
+        $("#output").html("¿El primer valor " +
+                            "es mayor que el segundo? " + 
+                            pMayors)
+    });
+</script>
+</head>
+<body>
+    <p id="message"></p>
+    <p id="output"></p>
+</body>
+</html>
