@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var sueldo=parseInt(prompt("Introduce tu sueldo base:"));
+            var venta1=parseInt(prompt("Importe conseguido en la primera venta:"));
+            var venta2=parseInt(prompt("Importe conseguido en la segunda venta:"));
+            var venta3=parseInt(prompt("Importe conseguido en la tercera venta:"));
+            var com1=venta1*0.1;
+            var com2=venta2*0.1;
+            var com3=venta3*0.1;
+            var total=sueldo+com1+com2+com3;
+            $("#sueldototal").html("El total de tu sueldo es: " + total);
+        });
+    </script>
+</head>
+<body>
+    <p id="sueldototal"></p>
+</body>
+</html>
