@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+             var num=parseInt(prompt("Introduce un número."));
+             var raizcua=Math.sqrt(num);
+             var raizcub=Math.cbrt(num);
+             $("#raizcuadrada").html("La raiz cuadrada es " + raizcua);
+             $("#raizcubica").html("La raiz cúbica es " + raizcub);
+        });
+    </script>
+</head>
+<body>
+    <p id="raizcuadrada"></p>
+    <p id="raizcubica"></p>
+</body>
+</html>

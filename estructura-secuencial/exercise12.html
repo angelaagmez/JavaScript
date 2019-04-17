@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var x1=parseFloat(prompt("Introduce la coordenada X1."));
+            var y1=parseFloat(prompt("Introduce la coordenada Y1."));
+            var x2=parseFloat(prompt("Introduce la coordenada X2."));
+            var y2=parseFloat(prompt("Introsuce la coordenada Y2."));
+            var c1=Math.pow(x1,2)-Math.pow(x2,2);
+            var c2=Math.pow(y1,2)-Math.pow(y2,2);
+            var total=Math.sqrt(c1+c2);
+            $("#distanciatotal").html("La distancia entre los dos puntos es: " + total);
+        });
+    </script>
+</head>
+<body>
+    <p id="distanciatotal"></p>
+</body>
+</html>

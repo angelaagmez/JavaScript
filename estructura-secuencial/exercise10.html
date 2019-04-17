@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var nota1=parseInt(prompt("Introduce la nota de tu primer parcial."));
+            var nota2=parseInt(prompt("Introduce la nota de tu segundo parcial."));
+            var nota3=parseInt(prompt("Introduce la nota de tu tercer parcial."));
+            var parciales=((nota1+nota2+nota3)/3)*0.55;
+            var nota4=parseInt(prompt("Introduce la nota de tu examen final."));
+            var final=nota4*0.3;
+            var nota5=parseInt(prompt("Introduce la nota de tu trabajo final."));
+            var trabajo=nota5*0.15;
+            var total=parciales+final+trabajo;
+            $("#notafinal").html("Tu calificacion final de Algoritmos es: " + total);
+        });
+    </script>
+</head>
+<body>
+    <p id="notafinal"></p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num1=parseFloat(prompt("Introduce el primer número."));
+            var num2=parseFloat(prompt("Introduce el segundo número."));
+            var resta=Math.abs(num1-num2);
+            $("#distancia").html("La distancia entre esos números es: " + resta);
+        });
+    </script>
+</head>
+<body>
+    <p id="distancia"></p>
+</body>
+</html>

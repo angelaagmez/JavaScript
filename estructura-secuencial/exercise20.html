@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var m2=parseInt(prompt("Introduce las monedas de 2€ que tengas."));
+            var m1=parseInt(prompt("Introduce las monedas de 1€ que tengas."));
+            var m50=parseInt(prompt("Introduce las monedas de 0,50€ que tengas."));
+            var m20=parseInt(prompt("Introduce las monedas de 0,20€ que tengas."));
+            var m10=parseInt(prompt("Introduce las monedas de 0,10€ que tengas."));
+            var total=m2*2+m1+m50*0.5+m20*0.2+m10*0.1;
+            $("#total").html("En total tienes: "+ total +" €");
+        });
+    </script>
+</head>
+<body>
+    <p id="total"></p>
+</body>
+</html>

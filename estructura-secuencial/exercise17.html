@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var hh=parseInt(prompt("Introduce la hora a la que sale el ciclista (horas)."));
+            var mm=parseInt(prompt("Introduce la hora a la que sale el ciclista (minutos)."));
+            var ss=parseInt(prompt("Introduce la hora a la que sale el ciclista (segundos)."));
+            var t=prompt("Introduce los segundos que tarda en llegar a la ciudad.");
+            var horas=parseInt(t/3600);
+            var restoh=t%3600;
+            var minutos=parseInt(restoh/60);
+            var segundos=restoh%60;
+            var totalh=hh+horas;
+            var totalm=mm+minutos;
+            var totals=ss+segundos;
+            $("#total").html("La hora de llegada es "+ totalh +" horas "+ totalm +" minutos "+ totals +" segundos.");
+        });
+    </script>
+</head>
+<body>
+    <p id="total"></p>
+</body>
+</html>

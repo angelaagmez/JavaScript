@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+             var v1=prompt("Introduce la velocidad del vehiculo 1 (km/h).");
+             var v2=prompt("Introduce la velocidad del vehiculo 2 (km/h).");
+             var d=prompt("Introduce la distancia entre los vehiculos (km).");
+             var t=d/(v2-v1);
+             var min=t*60;
+             $("#resultado").html("El tiempo en alcanzarse es: "+ min +" minutos");
+        });
+    </script>
+</head>
+<body>
+    <p id="resultado"></p>
+</body>
+</html>
