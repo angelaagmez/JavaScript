@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var x1=parseInt(prompt("Introduce la coordenada x1."));
+        var y1=parseInt(prompt("Introduce la coordenada y1."));
+        var x2=parseInt(prompt("Introduce la coordenada x2."));
+        var y2=parseInt(prompt("Introduce la coordenada y2."));
+        var r1=parseInt(prompt("Introduce el radio de la circuferencia 1."));
+        var r2=parseInt(prompt("Introduce el radio de la circuferencia 2."));
+        
+        var c1=Math.abs(Math.pow(x1,2)-Math.pow(x2,2));
+        var c2=Math.abs(Math.pow(y1,2)-Math.pow(y2,2));
+        var d=Math.sqrt(c1+c2);
+        if (x1==x2 && y1==y2)
+        {
+            $("#estado").html("Las circuferencias son concéntricas.");
+        }
+        else if ((r1+r2)<d)
+        {
+            $("#estado").html("Las circuferencias son exteriores.");
+        }
+        else if ((r1+r2)==d)
+        {
+            $("#estado").html("Las circuferencias son tangentes exteriores.");
+        }
+        else if ((r1+r2)>d)
+        {
+            $("#estado").html("Las circuferencias son exteriores.");
+        }
+        else if ((Math.abs(r1-r2))==d)
+        {
+            $("#estado").html("Las circuferencias son tangentes interiores.");
+        }
+        else if ((Math.abs(r1-r2))>d)
+        {
+            $("#estado").html("Las circuferencias son interiores.");
+        }     
+    });
+</script>
+</head>
+<body>
+    <p id="estado"></p>
+</body>
+</html>

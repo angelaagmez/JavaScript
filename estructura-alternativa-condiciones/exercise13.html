@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var dia=prompt("Introduce el día.");
+        var mes=prompt("Introduce el mes.");
+        var año=prompt("Introduce el año.");
+        if (dia<=31 && mes<=12 && año<=2019)
+        {
+            $("#fecha").html("La fecha "+dia+"-"+mes+"-"+año+" es correcta.");
+        }
+        else
+        {
+            $("#fecha").html("La fecha "+dia+"-"+mes+"-"+año+" no es correcta.");
+        }
+    });
+</script>
+</head>
+<body>
+    <p id="fecha"></p>
+</body>
+</html>

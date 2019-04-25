@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var A=parseInt(prompt("Introduce el lado 1 del triángulo."));
+        var B=parseInt(prompt("Introduce el lado 2 del triángulo."));
+        var C=parseInt(prompt("Introduce el lado 3 del triángulo."));
+        var A2=Math.pow(A,2);
+        var B2=Math.pow(B,2);
+        var C2=Math.pow(C,2);
+        if (A==B && A==C)
+        {
+            $("#triangulo").html("El triángulo es equilátero.");
+        }
+        if (A!=B && A!=C && B!=C)
+        {
+            $("#triangulo").html("El triángulo es escaleno.");
+        }
+        if (A==B && A!=C)
+        {
+            $("#triangulo").html("El triángulo es escaleno.");
+        }
+        if (A!=B && A==C)
+        {
+            $("#triangulo").html("El triángulo es escaleno.");
+        }
+        if (A!=C && B==C)
+        {
+            $("#triangulo").html("El triángulo es escaleno.");
+        }
+        if (A2==(B2+C2))
+        {
+            $("#triangulo").html("El triángulo es rectángulo.");
+        }
+        if (B2==(A2+C2))
+        {
+            $("#triangulo").html("El triángulo es rectángulo.");
+        }
+        if (C2==(B2+A2))
+        {
+            $("#triangulo").html("El triángulo es rectángulo.");
+        }
+    });
+</script>
+</head>
+<body>
+    <p id="triangulo"></p>
+</body>
+</html>
