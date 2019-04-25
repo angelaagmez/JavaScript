@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var mensaje=prompt("Introduce una frase.");
+        for (var c=0;c<mensaje.length;c++)
+        {
+            if (mensaje[c]=="A"||mensaje[c]=="B"||mensaje[c]=="C"||
+            mensaje[c]=="D"||mensaje[c]=="E"||mensaje[c]=="F"||
+            mensaje[c]=="G"||mensaje[c]=="H"||mensaje[c]=="I"||
+            mensaje[c]=="J"||mensaje[c]=="K"||mensaje[c]=="K"||
+            mensaje[c]=="M"||mensaje[c]=="N"||mensaje[c]=="Ñ"||
+            mensaje[c]=="O"||mensaje[c]=="P"||mensaje[c]=="Q"||
+            mensaje[c]=="R"||mensaje[c]=="S"||mensaje[c]=="T"||
+            mensaje[c]=="U"||mensaje[c]=="V"||mensaje[c]=="W"||
+            mensaje[c]=="X"||mensaje[c]=="Y"||mensaje[c]=="Z")
+            {
+                $("#mayus").html("El mensaje introducido está en mayúsculas.");
+            }
+            else
+            {
+                $("#mayus").html("El mensaje introducido no está mayúsculas.");
+            }
+        }
+        });
+</script>
+</head>
+<body>
+    <p id="mayus"></p>
+</body>
+</html>
