@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var n=parseInt(prompt("Introduce el número de niños que irán al viaje."));
+        var total;
+        if (n>=100)
+        {
+            $("#viaje").html("El precio por alumno es 65€.");
+        }
+        if (n>=50 && n<100)
+        {
+            $("#viaje").html("El precio por alumno es 70€.");
+        }
+        if (n>=30 && n<50)
+        {
+            $("#viaje").html("El precio por alumno es 95€.");
+        }
+        if (n<30)
+        {
+            total=4000/n;
+            $("#viaje").html("El precio por alumno es "+total+"€.");
+        }
+    });
+</script>
+</head>
+<body>
+    <p id="viaje"></p>
+</body>
+</html>

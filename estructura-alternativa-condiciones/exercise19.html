@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var m=prompt("Introduce un mes del año (nº).");
+        switch (m){
+            case "1":
+                $("#mes").html("El mes introducido es: Enero.");
+                break;
+            case "2":
+                $("#mes").html("El mes introducido es: Febrero.");
+                break;
+            case "3":
+                $("#mes").html("El mes introducido es: Marzo");
+                break;
+            case "4":
+                $("#mes").html("El mes introducido es: Abril");
+                break;
+            case "5":
+                $("#mes").html("El mes introducido es: Mayo");
+                break;
+            case "6":
+                $("#mes").html("El mes introducido es: Junio");
+                break;
+            case "7":
+                $("#mes").html("El mes introducido es: Julio");
+                break;
+            case "8":
+                $("#mes").html("El mes introducido es: Agosto");
+                break;
+            case "9":
+                $("#mes").html("El mes introducido es: Septiembre");
+                break;
+            case "10":
+                $("#mes").html("El mes introducido es: Octubre");
+                break;
+            case "11":
+                $("#mes").html("El mes introducido es: Noviembre");
+                break;
+            case "12":
+                $("#mes").html("El mes introducido es: Diciembre");
+                break;
+        default:{
+                $("#mes").html("El mes introducido es incorrecto.");
+            }
+        }
+    });
+
+</script>
+</head>
+<body>
+    <p id="mes"></p>
+</body>
+</html>

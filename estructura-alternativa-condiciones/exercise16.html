@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var min=prompt("Introduce el número de minutos de la llamada.");
+        var dia=prompt("Introduce el día de la semana en el que se realizó la llamada.");
+        var turno=prompt("Introduce el momento del día en que la hizo (mañana (m) o tarde (t)).");
+        var importe, total, sum;
+        if(min<=5)
+        {
+            importe=1;
+        }
+        if(min>5 && min<=8)
+        {
+            importe=1.8;
+        }
+        if(min>=8 && min<=10)
+        {
+            importe=2.5;
+        }
+        if(min>10)
+        {
+            importe=3;
+        }
+        
+        switch (dia)
+        {
+        case "Domingo":
+            sum=importe*0.03;
+            total=importe+sum;
+            $("#llamada").html("El importe de la llamada es: "+total+"€.");
+            break;
+        
+        default:
+        {
+            switch (turno)
+            {
+        case "m":
+            sum=importe*0.15;
+            total=importe+sum;
+            $("#llamada").html("El importe de la llamada es: "+total+"€.");
+            break;
+        case "t":
+            sum=importe*0.10;
+            total=importe+sum;
+            $("#llamada").html("El importe de la llamada es: "+total+"€.");
+            break;
+        default:
+                {
+                    $("#llamada").html("El día o turno del dia introducido es incorrecto.");
+                    break;
+                }
+            }
+        }
+        }
+    });
+
+</script>
+</head>
+<body>
+    <p id="llamada"></p>
+</body>
+</html>

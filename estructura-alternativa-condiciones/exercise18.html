@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var d=parseInt(prompt("Introduce un día de la semana (nº)."));
+        if (d==1){
+            $("#dia").html("El día introducido es: lunes.");
+        }
+        else if(d==2){
+            $("#dia").html("El día introducido es: martes.");
+        }
+        else if(d==3){
+            $("#dia").html("El día introducido es: miércoles.");
+        }
+        else if(d==4){
+            $("#dia").html("El día introducido es: jueves.");
+        }
+        else if(d==5){
+            $("#dia").html("El día introducido es: viernes.");
+        }
+        else if(d==6){
+            $("#dia").html("El día introducido es: sábado.");
+        }
+        else if(d==7){
+            $("#dia").html("El día introducido es: domingo.");
+        }     
+        else{
+             $("#dia").html("El día introducido es incorrecto.");
+            }
+    });
+</script>
+</head>
+<body>
+    <p id="dia"></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var zona=prompt("Introduzca la zona a la que desee mandar el paquete (nº 1-5).");
+        var peso=prompt("Introduca el peso del paquete (g).");
+        var total;
+    if (peso<=5000){
+        switch (zona){
+            case "1":
+                total=peso*24;
+                $("#paquete").html("El precio por transportar el paquete a América del Norte es: "+total+"€");
+                break;
+            case "2":
+                total=peso*20;
+                $("#paquete").html("El precio por transportar el paquete a América Central es: "+total+"€");
+                break;
+            case "3":
+                total=peso*21;
+                $("#paquete").html("El precio por transportar el paquete a América del Sur es: "+total+"€");
+                break;
+            case "4":
+                total=peso*10;
+                $("#paquete").html("El precio por transportar el paquete a Europa es: "+total+"€");
+                break;
+            case "5":
+                total=peso*18;
+                $("#paquete").html("El precio por transportar el paquete a Asia es: "+total+"€");
+                break;
+            default:{
+                $("#paquete").html("Zona desconocida.");
+            }
+        }
+    }
+    else{
+        $("#paquete").html("El peso no puede superar los 5kg (5000 gr).");
+    }
+});
+</script>
+</head>
+<body>
+    <p id="paquete"></p>
+</body>
+</html>

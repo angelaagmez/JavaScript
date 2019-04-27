@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var kg=parseFloat(prompt("Introduce el precio del kg de uva."));
+        var tipo=prompt("Introduce el tipo de uva (A-B).");
+        var tamaño=parseInt(prompt("Introduce el tamaño de la uva (1-2)."));
+        var total;
+    switch (tipo) {
+        case "A":
+        if (tamaño==1)
+        {
+            total=kg+0.2;
+            $("#final").html("El precio final es "+total+ "€.");
+            break;
+        }
+        if (tamaño==2)
+        {
+            total=kg+0.3;
+            $("#final").html("El precio final es "+total+"€.");
+            break;
+        }
+        case "B":
+        if (tamaño==1)
+        {
+            total=kg-0.3;
+            $("#final").html("El precio final es "+total+ "€.");
+            break;
+        }
+        if (tamaño==2)
+        {
+            total=kg-0.5;
+            $("#final").html("El precio final es "+total+"€.");
+            break;
+        }
+        default: 
+        {
+            $("#final").html("El tipo o el tamaño introducido es incorrecto.");
+        }
+    }
+    });
+</script>
+</head>
+<body>
+    <p id="final"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var num=parseInt(prompt("Introduce el número del dado."));
+    if (num>=1 && num<=6)
+        {
+        switch (num)
+            {
+            case 1:
+                $("#dado").html("La cara opuesta es: 6.");
+                break;
+            case 2:
+                $("#dado").html("La cara opuesta es: 5.");
+                break;
+            case 3:
+                $("#dado").html("La cara opuesta es: 4.");
+                break;
+            case 4:
+                $("#dado").html("La cara opuesta es: 3.");
+                break;
+            case 5:
+                $("#dado").html("La cara opuesta es: 2.");
+                break;
+            case 6:
+                $("#dado").html("La cara opuesta es: 1.");
+                break;
+            }
+        }
+    else
+        {
+            $("#dado").html("ERROR: número incorrecto.");
+        }
+});
+</script>
+</head>
+<body>
+    <p id="dado"></p>
+</body>
+</html>
