@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var intmin=prompt("Introduce el límite inferior.");
+            var intmax=prompt("Introduce el límite superior.");
+            while (intmin>intmax)
+            {
+                intmin=prompt("Introduce el límite inferior.");
+                intmax=prompt("Introduce el límite superior.");
+            }
+            var num=parseInt(prompt("Introduce un número."));
+            var c1=0;
+            var c2=0;
+            var sum=0;
+            while (num!=0){
+                if(num==intmax || num==intmin){
+                    c1++;
+                }
+                if (num>=intmin && num<=intmax){
+                    sum=sum+num;
+                }
+                if (num<intmin || num>intmax){
+                    c2++;
+                }
+                num=parseInt(prompt("Introduce más números, para parar introduce un 0."));    
+            }
+                $("#total").html("La suma de todos los números dentro del rango es "+sum);
+            if(c2>=1){
+                $("#total1").html("Has introducido "+c2+ " números fuera del rango.")
+            }
+            if (c1>=1){
+                $("#total2").html("Has introducido "+c1+" números igual a los límites.");
+            }
+        });
+        </script>
+</head>
+<body>
+    <p id="total"></p>
+    <p id="total1"></p>
+    <p id="total2"></p>
+</body>
+</html>
