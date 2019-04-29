@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var sueldo=parseFloat(prompt("Introduce el sueldo/hora del empleado."));
+            var totalh=0;
+            for (var c=1; c<=6; c++)
+            {
+                var horas=parseFloat(prompt("Introduce las horas trabajadas el dia "+c+" de la semana"));
+                totalh=totalh+horas;
+            }
+            var totals=sueldo*totalh;
+            $("#empresa").html("El tabajador ha trabajado "+totalh+ "h, recibirá "+totals+"€.")
+        });
+        </script>
+</head>
+<body>
+    <p id="empresa"></p>
+</body>
+</html>

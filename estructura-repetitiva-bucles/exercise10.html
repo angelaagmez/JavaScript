@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var a=1,b=2,c=3,d=4,e=5;
+
+            for (var cont=10; cont>=0; cont--)
+            {
+                mult=a*cont;
+                $("#tabla").prepend(a+" x "+cont+" = "+mult +"<br/>");
+                mult=b*cont;
+                $("#tabla1").prepend(b+" x "+cont+" = "+mult +"<br/>");
+                mult=c*cont;
+                $("#tabla2").prepend(c+" x "+cont+" = "+mult +"<br/>");
+                mult=d*cont;
+                $("#tabla3").prepend(d+" x "+cont+" = "+mult +"<br/>");
+                mult=e*cont;
+               $("#tabla4").prepend(e+" x "+cont+" = "+mult +"<br/>");
+            }
+        });
+        </script>
+        <style>
+        table{
+            margin-left: 35%;
+            margin-top: 15%;
+        }
+        td{
+            border: 1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <td id="tabla"></td>
+        <td id="tabla1"></td>
+        <td id="tabla2"></td>
+        <td id="tabla3"></td>
+        <td id="tabla4"></td>
+    </table>
+</body>
+</html>

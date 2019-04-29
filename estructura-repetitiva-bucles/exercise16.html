@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var t=parseInt(prompt("Introduce el número de trabajadores contratados."));
+            var sueldo=parseFloat(prompt("Introduce cuánto cobran por hora."));
+            var total=0;
+            var g=0;;
+            var horas;
+            for(var c=1; c<=t; c++)
+            {
+                horas=parseFloat(prompt("Introduce las horas que ha trabajado el trabajador "+c+"."));
+                total=sueldo*horas;
+                $("#sueldo").prepend("El trabajador "+c+" debe cobrar "+ total+"€ <br/>");
+                g=g+total;
+            }
+            $("#sueldo").prepend("La empresa debe desembolsar un total de: "+g+"€ <br/>");
+        });
+        </script>
+</head>
+<body>
+    <p id="sueldo"></p>
+</body>
+</html>

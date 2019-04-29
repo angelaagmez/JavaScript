@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var total=0;
+            for (var c=1; c<=12; c++)
+            {    
+                var a=parseFloat(prompt("Cuanto dinero ha ahorrado el "+c+"º mes?"));
+                total=total+a;
+                $("#ahorro").prepend("El "+c+"º mes has ahorrado "+a+"€ <br/>");
+            }
+            $("#ahorro2").html("Durante el año has ahorrado "+total+"€")
+        });
+        </script>
+</head>
+<body>
+    <p id="ahorro"></p>
+    <p id="ahorro2"></p>
+</body>
+</html>

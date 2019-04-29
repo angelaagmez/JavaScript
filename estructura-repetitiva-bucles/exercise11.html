@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var num=prompt("Introduce un número.");
+            var c=1;
+            var div=0;
+            while (c<=num)
+            {
+                var r=num%c
+                if (r==0)
+                {
+                    div++;
+                }
+                c++;
+            }
+            if (div==2)
+            {
+                $("#primo").html("El número "+num+" es primo.");
+            }
+            if (div>2)
+            {
+                $("#primo").html("El número "+num+" no es primo.");
+            }
+        });
+        </script>
+</head>
+<body>
+    <p id="primo"></p>
+</body>
+</html>
