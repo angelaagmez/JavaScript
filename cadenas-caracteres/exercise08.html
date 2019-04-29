@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Introduce una frase.");
+            var cad2=cad.split("");
+            alert(cad2);
+            var cad3=cad.toUpperCase();
+            alert(cad3);
+            for(var c=0;c<cad.length;c++)
+            {
+                if (cad3[c]===cad2[c])
+                {
+                    cad2[c]=cad2[c].toLowerCase();
+                }
+                else
+                {
+                    cad2[c]=cad2[c].toUpperCase();
+                }
+            }
+            var cad4=cad2.join("");
+            alert(cad4);
+        });
+        </script>
+</head>
+<body>
+</body>
+</html>

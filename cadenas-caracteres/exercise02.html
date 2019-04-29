@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad1=prompt("Introduzca una frase.");
+            var cad2=prompt("Introduzca el comienzo.");
+            var c=0;
+            while (c<cad2.length)
+            {
+                if (cad1[c]===cad2[c])
+                {
+                    $("#cadena").prepend(cad1[c]+"&nbsp;");
+                    $("#cadena2").prepend(cad2[c]+"&nbsp;");
+                }
+                else 
+                {
+                    $("#cadena3").html("Las cadenas no son iguales, el caracter distinto es: "+cad2[c]+", debería ser: "+cad1[c]);
+                    break;
+                }
+                c++;
+            }
+        });
+        </script>
+</head>
+<body>
+    <p id="cadena"></p>
+    <p id="cadena2"></p>
+    <p id="cadena3"></p>
+</body>
+</html>
